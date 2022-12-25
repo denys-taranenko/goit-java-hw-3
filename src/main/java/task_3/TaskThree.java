@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class taskThree {
+public class TaskThree {
 
     public void sumWords(){
         int n = 10;

@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class taskOne {
+public class TaskOne {
 
     public void readFile() {
         File file = new File("D:\\Programming\\Java\\Homework-Module-10\\src\\main\\resources\\file1.txt");

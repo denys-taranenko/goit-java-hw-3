@@ -1,19 +1,34 @@
-import task_1.taskOne;
-import task_2.taskTwo;
-import task_3.taskThree;
+import task_1.TaskOne;
+import task_2.TaskTwo;
+import task_3.TaskThree;
+
+import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
 
-        taskOne oneTask = new taskOne();
-        oneTask.readFile(); /* Should be 987-123-4567
-                                         (123) 456-7890 */
+        TaskOne taskOne = new TaskOne();
+        taskOne.readFile();                /* Should be 987-123-4567
+                                           (123) 456-7890 */
 
-        taskTwo twoTask = new taskTwo();
-        twoTask.txtToJson();
+        TaskTwo taskTwo = new TaskTwo();
+        try {
+            taskTwo.txtToJson();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }                                  /* Should be [
+                                                          {
+                                                            "name": "alice",
+                                                            "age": 21
+                                                          },
+                                                          {
+                                                            "name": "ryan",
+                                                            "age": 30
+                                                          }
+                                                        ] */
 
-        taskThree threeTask = new taskThree();
-        threeTask.sumWords(); /* Should be the 4
+        TaskThree taskThree = new TaskThree();
+        taskThree.sumWords();              /* Should be the 4
                                            is 3
                                            sunny 2
                                            day 1 */
